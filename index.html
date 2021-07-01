@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Pizza</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <h1 class="text-center bg-danger">RECETTES SELON VOS INGERDIENTS</h1>
+    <div id="appPizza" class="row">
+        <div class="col-12">
+            <h2 class="text-center bg-info"> LISTE DES PIZZAS</h2>
+        </div>
+        <div class="card col-2 p-1" style="width: 18rem;" v-for="pizza in pizzas">
+            <div class="card-body">
+                <h5 class="card-title">{{pizza.name}}</h5>
+                <p>{{pizza.ingredients.toString()}}</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="appIngredient" class="row">
+        <div class="col-12">
+            <h2 class="text-center bg-success"> LISTE DES INGREDIENTS</h2>
+        </div>
+        <div class="card col-2 p-1" style="width: 18rem;" v-for="ingredient in ingredients">
+            <div class="card-body">
+                <input v-model="filtreIngredient" class="form-check-input" @change="ajouter(ingredient)" type="checkbox" :id="ingredient" :value="ingredient" >{{ingredient}}</input>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="appResultat" class="row">
+        <div class="col-12">
+            <h2 class="text-center bg-info"> LISTE DES RESULTATS</h2>
+        </div>
+        <div class="card col-2 p-1" style="width: 18rem;" v-for="liste in liste">
+            <div class="card-body">
+                <h5 class="card-title">{{liste}}</h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

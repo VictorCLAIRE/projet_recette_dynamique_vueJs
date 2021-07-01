@@ -1,0 +1,39 @@
+{
+  "pizzas": [
+    {
+      "name": "reine",
+      "ingredients": [
+        "sauce tomate",
+        "fromage",
+        "champignon"
+      ]
+    },
+    {
+      "name": "calzone",
+      "ingredients": [
+        "sauce tomate",
+        "fromage",
+        "oeuf"
+      ]
+    },
+    {
+      "name": "chorizo",
+      "ingredients": [
+        "sauce tomate",
+        "fromage",
+        "chorizo"
+      ]
+    }
+  ],
+  "ingredients": [
+      "sauce tomate",
+      "fromage",
+      "champignon",
+      "oeuf",
+      "chorizo"
+  ],
+  "liste":[
+    "kjkjj"
+
+  ]
+}
